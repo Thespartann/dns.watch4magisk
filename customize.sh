@@ -63,6 +63,12 @@ set_permissions() {
 # MMT Extended Logic - Don't modify anything after this
 ##########################################################################################
 
+if [ -a /system/etc/resolv.conf ]; then
+	mkdir -p $TMPDIR/system/etc/
+	printf "nameserver 84.200.69.80\nnameserver 84.200.70.40" >> $TMPDIR/system/etc/resolv.conf
+	touch $TMPDIR/auto_mount
+fi
+
 SKIPUNZIP=1
 unzip -qjo "$ZIPFILE" 'common/functions.sh' -d $TMPDIR >&2
 . $TMPDIR/functions.sh

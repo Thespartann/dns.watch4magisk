@@ -1,7 +1,6 @@
-id=MMT-Ex
-name=Magisk Module Template Extended
-version=v1.7
+id=dns.watch4magisk
+name=DNS.Watch Magisk Module
+version=v1.0
 versionCode=8
-author=Zackptg5
-description=
-support=https://forum.xda-developers.com/apps/magisk/MMT-Extended
+author=Thespartann
+description= Change default DNS to dns.watch
